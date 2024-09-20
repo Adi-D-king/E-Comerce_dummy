@@ -1,16 +1,22 @@
+body{
+    // background-color: aquamarine;
+}
 .navbar{
     justify-content: space-between;
     display: flex;
     align-items: center;
-    background-color: aquamarine;
+    background-color: rgba(254, 158, 106, 0.512);
 
     .start_nav{
         margin-left: 20px;
-        // border: 2px black solid;
+        border: 2px black solid;
         text-align: center;
     }
 
     .mid_nav ul{
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
         list-style: none;
 
         li a{

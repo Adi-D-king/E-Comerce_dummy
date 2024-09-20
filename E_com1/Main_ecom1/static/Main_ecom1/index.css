@@ -1,14 +1,18 @@
-.navbar{
+.navbar {
   justify-content: space-between;
   display: flex;
   align-items: center;
-  background-color: blue;
+  background-color: rgba(254, 158, 106, 0.512);
 }
 .navbar .start_nav {
   margin-left: 20px;
+  border: 2px black solid;
   text-align: center;
 }
 .navbar .mid_nav ul {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
   list-style: none;
 }
 .navbar .mid_nav ul li a {
