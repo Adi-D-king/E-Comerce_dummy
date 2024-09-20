@@ -1,0 +1,29 @@
+.navbar{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background-color: aquamarine;
+
+    .start_nav{
+        margin-left: 20px;
+        // border: 2px black solid;
+        text-align: center;
+    }
+
+    .mid_nav ul{
+        list-style: none;
+
+        li a{
+            padding: 0px;
+            margin: 0px 8px 0px 8px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+    }
+
+    .end_nav{
+        margin-right: 20px;
+        border: 2px black solid;
+
+    }
+}

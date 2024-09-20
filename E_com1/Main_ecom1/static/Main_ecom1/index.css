@@ -1,0 +1,25 @@
+.navbar{
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: blue;
+}
+.navbar .start_nav {
+  margin-left: 20px;
+  text-align: center;
+}
+.navbar .mid_nav ul {
+  list-style: none;
+}
+.navbar .mid_nav ul li a {
+  padding: 0px;
+  margin: 0px 8px 0px 8px;
+  text-decoration: none;
+  font-size: 24px;
+}
+.navbar .end_nav {
+  margin-right: 20px;
+  border: 2px black solid;
+}
+
+/*# sourceMappingURL=index.css.map */
