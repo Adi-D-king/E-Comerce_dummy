@@ -1,29 +1,120 @@
-.navbar {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.navbar1 {
   justify-content: space-between;
   display: flex;
   align-items: center;
   background-color: rgba(254, 158, 106, 0.512);
 }
-.navbar .start_nav {
+.navbar1 .start_nav {
   margin-left: 20px;
   border: 2px black solid;
   text-align: center;
 }
-.navbar .mid_nav ul {
+.navbar1 .mid_nav ul {
   justify-content: space-between;
   display: flex;
   align-items: center;
   list-style: none;
 }
-.navbar .mid_nav ul li a {
+.navbar1 .mid_nav ul li :hover {
+  background-color: rgba(253, 193, 161, 0.432);
+}
+.navbar1 .mid_nav ul li a {
   padding: 0px;
-  margin: 0px 8px 0px 8px;
+  margin: 0px 16px 0px 16px;
   text-decoration: none;
   font-size: 24px;
 }
-.navbar .end_nav {
+.navbar1 .search_bar {
+  justify-content: baseline;
+  display: flex;
+  height: 28px;
+  width: 20%;
+  position: relative;
+}
+.navbar1 .search_bar i {
+  margin-top: 8px;
+  font-size: 20px;
+}
+.navbar1 .search_bar input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.navbar1 .search_bar input:focus {
+  border-color: #ed6003;
+}
+.navbar1 .end_nav {
   margin-right: 20px;
-  border: 2px black solid;
+}
+.navbar1 .end_nav a {
+  text-decoration: none;
+  margin: 10px;
+  font-size: 24px;
+}
+
+.navbar2 {
+  display: none;
+  background-color: rgba(254, 158, 106, 0.512);
+}
+.navbar2 img {
+  height: 25px;
+  margin-left: 50%;
+}
+.navbar2 .start_nav2 {
+  display: flex;
+}
+.navbar2 .start_nav2 i {
+  margin-top: 7px;
+  margin-left: 18px;
+  font-size: 18px;
+}
+.navbar2 .start_nav2 .search_bar2 label {
+  padding-left: 10px;
+}
+.navbar2 .start_nav2 .search_bar2 input {
+  width: 125%;
+  height: 25px;
+  border-radius: 20px;
+  border: 1px solid lightgrey;
+}
+.navbar2 .start_nav2 .search_bar2 input:focus {
+  border-color: #ed6003;
+}
+
+@media (max-width: 768px) {
+  .navbar1 {
+    display: none;
+  }
+  .navbar2 {
+    display: block;
+  }
+}
+.list {
+  display: block;
+  border: 2px solid black;
+}
+
+.list:valid ~ #list {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */
