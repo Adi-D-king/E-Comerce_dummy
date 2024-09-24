@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: #f2f2f2;
+  /* background: linear-gradient(-135deg,#ffd968, #ff3030); */
+}
+::selection{
+    background: #fa0202;
+    color: #fff;
+}
+.container{
+    width: 680px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgb(0,0,0,0.3);
+}
+.container .title{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    user-select: none;
+    border-radius: 15px 15px 0 0;
+    background: linear-gradient(-105deg, #f42f10, #f7de26);
+
+}
+
+.container form{
+    padding: 10px 30px 50px 30px;
+  }
+
+.name{
+  display: flex;
+}
+
+.field,.field2,.field3{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+  }
+  .field1 input{
+    width: 260px;
+  }
+  .field2 input{
+    width: 320px;
+    margin-right: 34px;
+  }
+  .field input,.field2 input{
+    height: 80%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+
+.field input:focus,
+.field input :valid{
+    border-color: #ed6003;
+  }
+
+.field label,.field2 label,.field3 label{
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    color: #999999;
+    font-weight: 400;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+.field input:focus ~ label,
+.field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #ed6003;
+  background: #fff;
+  transform: translateY(-50%);
+}
+.button{
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.button button{
+  padding: 8px;
+  font-size: 22px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  background-color: #ed6003;
+  color: white;
+}
+.button button:hover{
+  background-color: #ff9d14;
+}
+.link{
+  color: #262626;
+  margin-top: 35px;
+  text-align: center;
+}
+.link a{
+  color: #ed6003;
+  text-decoration: none;
+}
+.link a:hover{
+  text-decoration: underline;
+}
+hr{
+  margin-top: 7px;
+  margin-left: 2px;
+  width: 320px;
+  height: 3px;
+  border: none;
+  background-color: #ccbfb6;
+}
+h4{
+  margin-left: 8px;
+  margin-right: 6px;
+  color: #ed6003;
+}
