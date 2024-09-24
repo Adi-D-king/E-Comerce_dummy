@@ -81,16 +81,21 @@ body {
 }
 .navbar2 .lower_nav {
   display: flex;
-  padding-bottom: 5px;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 40px;
 }
 .navbar2 .lower_nav i {
   margin-top: 7px;
-  margin-left: 18px;
   font-size: 18px;
 }
+.navbar2 .lower_nav .search_bar2 {
+  display: flex;
+}
 .navbar2 .lower_nav .search_bar2 input {
-  width: 125%;
-  height: 25px;
+  width: 120%;
+  height: 26px;
   border-radius: 20px;
   border: 1px solid lightgrey;
 }
@@ -99,20 +104,19 @@ body {
 }
 
 .droplist {
-  top: 76px;
   position: absolute;
   left: -400px;
   z-index: 2;
-  background-color: rgba(247, 156, 156, 0.95);
+  background-color: rgba(247, 156, 156, 0.97);
 }
 .droplist ul {
-  padding: 5px;
+  padding: 2px;
 }
 .droplist ul li {
   list-style: none;
   border-bottom: 1px solid black;
   padding-right: 20px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 .droplist ul li .profile {
   padding: 10px;
