@@ -16,7 +16,7 @@
         <div class="title">Sing Up Form</div>
         <form method="post">
             {% csrf_token %}
-            <div class="name">
+            <!-- <div class="name">
                 <div class="field field1">
                     <input name="first_name" id="f_name" type="text" required>
                     <label>First Name</label>
@@ -35,7 +35,8 @@
                     <input name="phone_number" type="text" id="p_number" required>
                     <label>Phone no.</label>
                 </div>
-            </div>
+            </div> -->
+            {{ form }}
             <div class="button">
                 <button type="submit">Sing Up</button>
             </div>

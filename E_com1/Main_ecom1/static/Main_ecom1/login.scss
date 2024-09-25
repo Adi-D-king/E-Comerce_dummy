@@ -19,6 +19,7 @@ html,body{
 }
 
 .wrapper{
+    height: auto;
     width: 380px;
     background: #f9f9f9;
     border-radius: 15px;
@@ -152,7 +153,6 @@ html,body{
 @media (max-width: 768px) {
     .wrapper{
         display: none;
-        // height: 400px;
-        // width: 100%;
+        // width: 300px;
     }
 }
