@@ -1,0 +1,79 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Index_ecom1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static "users/index.css" %}'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src='main.js'></script> -->
+</head>
+
+<body>
+    <input type="checkbox" name="" id="list" hidden>
+    <!-- Navbar -->
+    <div class="navbar1">
+
+        <!-- Start_nav -->
+        <div class="start_nav">
+            logo_image
+        </div>
+
+        <!-- Mid_nav -->
+        <div class="mid_nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+
+        <!-- Search bar -->
+        <div class="search_bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input width="50px" placeholder="Search..">
+        </div>
+
+        <!-- End_nav -->
+        <div class="end_nav">
+            <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-solid fa-store"></i></a>
+        </div>
+    </div>
+    <div class="navbar2">
+        <img src="#" alt="logo">
+        <div class="lower_nav">
+            <label for="list"><i class="fa-solid fa-bars"></i></label>
+            <div class="search_bar2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Search Product..">
+            </div>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </div>
+
+    <div class="droplist">
+        <ul>
+            <li>
+                <div class="profile">
+                    <img src="" alt="profile_pitcur">
+                    <label>User_name</label>
+                </div>
+            </li>
+            <li><a href="#">Home </a></li>
+            <li><a href="#">Shop </a></li>
+            <li><a href="#">Category </a></li>
+            <li><a href="#">About </a></li>
+        </ul>
+    </div>
+    <h1>Index_ecom1</h1>
+</body>
+
+</html>
