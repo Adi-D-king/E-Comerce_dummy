@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'ProjectRelic.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'E_com_dummy',
+        'USER': 'root',
+        'PASSWORD': 'Adity@4410',
+        'HOST': 'localhost',  # Or the IP address if MySQL is on a remote server
+        'PORT': '3306',  # Default MySQL port
     }
 }
 
