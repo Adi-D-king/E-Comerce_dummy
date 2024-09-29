@@ -12,3 +12,4 @@ class Products(models.Model):
     breadCrumbs = models.TextField()
     description = models.TextField()
     price = models.DecimalField(max_digits=10,decimal_places=2)
+    url = models.TextField(default='n/a')

@@ -108,7 +108,7 @@ body {
     // }
 
     .search_bar2 {
-        display: flex;
+      display: flex;
       input {
         width: 120%;
         height: 26px;
@@ -124,7 +124,7 @@ body {
 }
 
 .droplist {
-//   top: 76px;
+  //   top: 76px;
   // border:2px solid black ;
   position: absolute;
   left: -400px;
@@ -139,15 +139,15 @@ body {
       padding-right: 20px;
       padding-top: 10px;
 
-      .profile{
+      .profile {
         padding: 10px;
         height: 50px;
         width: 100%;
         justify-content: space-between;
         display: flex;
 
-        img{
-            border-radius: 50%;
+        img {
+          border-radius: 50%;
         }
       }
 
@@ -173,4 +173,31 @@ body {
     left: 0px;
     transition: left 0.4s;
   }
+}
+
+/*=====slider====*/
+// display: flex;
+.item {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  // box-shadow: 20px 10px 10px 10px solid black;
+  margin-left: 20px;
+  margin: 10px;
+  article {
+    text-align: center;
+    margin: 10px;
+    width: 280px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    // margin-left: 20px;
+    // border: 2px solid black;
+    box-shadow: 0px 10px 30px 0px black;
+    border-radius: 20px;
+    div img{
+    width: 230px;
+    height: 230px;
+
+  }
+  // width: 70px;
+}
 }

@@ -74,14 +74,19 @@
         </ul>
     </div>
     <!-- hero section  -->
-    <slider>
-        <!-- <div>
-            {% for i in products%}
-            <h1>{{ i.product_id}}</h1>
-            <h5>{{ i.title}}</h5>
-            {% endfor%}
-        </div> -->
-    </slider>
+    <!-- <slider>
+    </slider> -->
+    <!-- products -->
+     <div class="item">
+        {% for i in products%}
+        <article>
+            <div><img src="{{i.thumbnailImage}}" alt="{{i.product_id}}"></div>
+            <div>{{i.brand}}</div>
+            <div>$ {{i.price}}</div>
+         </article>
+        {% endfor%}
+     </div>
+    
     <h1>Index_ecom1</h1>
 </body>
 
