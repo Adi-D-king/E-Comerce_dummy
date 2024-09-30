@@ -1,7 +1,6 @@
 {% load static%}
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -13,7 +12,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <script src='main.js'></script> -->
 </head>
-
 <body>
     <input type="checkbox" name="" id="list" hidden>
     <!-- Navbar -->
@@ -73,23 +71,11 @@
             <li><a href="#">About </a></li>
         </ul>
     </div>
-    <!-- hero section  -->
-    <!-- <slider>
-    </slider> -->
-    <!-- products -->
-     <div class="item">
-        {% for i in products%}
-        <article>
-            <a href="{% url 'productView' i.product_id %}">
-            <div><img src="{{i.thumbnailImage}}" alt="{{i.product_id}}"></div>
-            <div>{{i.brand}}</div>
-            <div>$ {{i.price}}</div>
-            </a>
-         </article>
-        {% endfor%}
-     </div>
-    
-    <h1>Index_ecom1</h1>
-</body>
 
+
+    <h1>Product view {{product.product_id}}</h1>
+    <h2>{{product.title}}</h2>
+    <h2>{{product.asin}}</h2>
+    <img src="{{ product.thumbnailImage}}">
+</body>
 </html>
