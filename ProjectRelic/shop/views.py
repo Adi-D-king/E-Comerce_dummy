@@ -11,4 +11,6 @@ def index(request):
 
 def productView(request,product_id):
     product = get_object_or_404(Products,product_id=product_id)
-    return render(request,'shop/productview.html',{'product':product})
+    print(type(product.stars))
+    return render(request,'shop/product.html',{'product':product, 'range':[1,2,3,4,5] })
+

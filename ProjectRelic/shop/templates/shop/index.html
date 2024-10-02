@@ -83,7 +83,7 @@
             <a href="{% url 'productView' i.product_id %}">
             <div><img src="{{i.thumbnailImage}}" alt="{{i.product_id}}"></div>
             <div>{{i.brand}}</div>
-            <div>$ {{i.price}}</div>
+            <div>$ {{i.price}}    stars{{i.stars}}</div>
             </a>
          </article>
         {% endfor%}
