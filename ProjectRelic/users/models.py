@@ -7,6 +7,7 @@ class Accounts(models.Model):
     lastname = models.CharField(max_length=20,default="user_last_name")
     e_mail = models.EmailField(max_length=20,unique=True)
     phone_no = models.CharField(max_length=20,unique=True)
+    password = models.CharField(max_length=20,unique=True,default='N/A')
 
     def __int__(self):
         return self.user_id
