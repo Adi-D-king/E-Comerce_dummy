@@ -3,7 +3,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from .forms import Userregestration
 from .models import Accounts
 from django.shortcuts import get_object_or_404
-
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -21,11 +21,12 @@ def login(request):
         else:
             return redirect("worng passowrd")
     else:
-        return render(request,'users.login.html')
+        return render(request,'users/login.html')
         
         
 def singup(request):
     if request.method == 'POST':
+        print(request)
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         e_mail = request.POST.get('e_mail')
@@ -33,11 +34,19 @@ def singup(request):
 
         print(first_name,last_name,e_mail,phone_nub)
 
-        form_data = Accounts(firstname=first_name,lastname=last_name,e_mail=e_mail,phone_no=phone_nub).save()
-        # form_data.save()
+        form_data = Accounts(firstname=first_name,lastname=last_name,e_mail=e_mail,phone_no=phone_nub)
+        form_data.save()
         return redirect('login')
-    
-    return render(request,'users/singup.html')
+    else:
+        print(request)
+        return render(request,'users/singup.html')
+
+def verify_email(request):
+    email = request.GET.get('email')
+    response_data = {
+            'is_taken': Accounts.objects.filter(e_mail=email).exists()
+    }
+    return JsonResponse(response_data)
 
 def singup2(request):
     if request.method == 'POST':
