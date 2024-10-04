@@ -20,6 +20,8 @@ def login(request):
                 return redirect('404')
         else:
             return redirect("worng passowrd")
+    else:
+        return render(request,'users.login.html')
         
         
 def singup(request):
