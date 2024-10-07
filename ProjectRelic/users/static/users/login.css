@@ -77,12 +77,16 @@ html, body {
   background: #fff;
   transform: translateY(-50%);
 }
-.wrapper form .field input[type=submit] {
+.wrapper form .field button[type=submit] {
+  margin: 10px;
+  width: 300px;
   color: #fff;
-  border: none;
-  padding-left: 0;
+  border-radius: 20px;
   margin-top: -10px;
-  font-size: 20px;
+  font-size: 25px;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
   font-weight: 500;
   cursor: pointer;
   background: linear-gradient(-135deg, #f42f10, #f7de26);

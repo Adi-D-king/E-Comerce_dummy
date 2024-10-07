@@ -79,6 +79,7 @@
                 let email = $(this).val();
 
                 $.ajax({
+                    type:'POST',
                     url: "{% url 'verify-email' %}",
                     data: {
                         'email': email

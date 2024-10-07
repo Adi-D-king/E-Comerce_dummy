@@ -11,6 +11,7 @@
       <div class="wrapper">
          <div class="title">Login Form</div>
          <form action="#" method="post">
+            {% csrf_token %}
             <div class="field">
                <input type="text" name="e_mail" required>
                <label>Email Address</label>
@@ -18,10 +19,6 @@
             <div class="field">
                <input type="password" name="password" required>
                <label>Password</label>
-            </div>
-            <div class="field">
-               <input type="password" name="confirm_password" required>
-               <label>Confirm Password</label>
             </div>
             <div class="content">
                <div class="checkbox">
@@ -33,7 +30,7 @@
                </div>
             </div>
             <div class="field">
-               <input type="submit" value="Login">
+               <button type="submit" value="Login">Sumit</button>
             </div>
             <div class="signup-link">
                Don't have an acco? <a href="singup">Create account</a>
