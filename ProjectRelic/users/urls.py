@@ -23,5 +23,5 @@ urlpatterns = [
     path('login',views.login,name='login'),
     path('singup',views.singup,name='singup'),
     path('singup2',views.singup2,name='singup2'),
-    path('verify-email/', views.verify_email, name='verify-email'),
+    path('verify-email', views.verify_email, name='verify-email'),
 ]

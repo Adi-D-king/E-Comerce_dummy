@@ -5,7 +5,7 @@ from .models import Accounts
 from shop.models import Products
 from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
-from django.contrib.auth.hashers import make_password,check_password
+from django.contrib.auth.hashers import make_password, check_password
 
 # Create your views here.
 
