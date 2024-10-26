@@ -1,5 +1,5 @@
 from django.db import models
-from users.models import Accounts
+# from users.models import Accounts
 
 # Create your models here.
 class Products(models.Model):
