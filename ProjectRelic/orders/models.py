@@ -1,6 +1,7 @@
 from django.db import models
 from users.models import Accounts,Carts
 from shop.models import Products
+from payments.models import Payments
 # Create your models here.
 
 class Orders(models.Model):
@@ -12,8 +13,7 @@ class Orders(models.Model):
     shipping_date = models.DateTimeField()
     delivery_date = models.DateTimeField()
     status = models.CharField(max_length=50)
-    cart_id = models.ForeignKey(Carts,on_delete=models.PROTECT)
-
+    quantity = models.IntegerField(default=1)
 
     def __int__(self):
         return self.order_id
@@ -22,10 +22,11 @@ class Orders(models.Model):
 class OrderDetails(models.Model):
     order_id = models.ForeignKey(Orders,primary_key=True,on_delete=models.CASCADE)
     products_id = models.ForeignKey(Products,on_delete=models.CASCADE)
-    # Payment_id = models.ForeignKey(Payments,on_delete=models.CASCADE)
-    quantity = models.IntegerField(max_length=20,default=1)
+    payment_id = models.ForeignKey(Payments,on_delete=models.CASCADE)
+    quantity = models.IntegerField(default=1)
     payment_status = models.CharField(max_length=20)
-    amount = models.DecimalField(max_digits=10,decimal_places=2)
+    cart_id = models.ForeignKey(Carts,on_delete=models.PROTECT)
+
 
     def __int__(self):
         return self.order_id
