@@ -22,11 +22,6 @@
          <div class="title">{{product.title}}</div>
          <div class="div2">Price: $ {{product.price}}</div>
          <div class="stars">
-            <!-- <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-regular fa-star"></i> -->
             {% for i in range %}
                {% if product.stars >= i %}
                <i class="fa-solid fa-star"></i>
@@ -35,19 +30,8 @@
                {% endif %}
             {% endfor %}
          </div>
-         <!-- <div>
-            <ul>
-               {% for i in range %}
-               {% if product.stars >= i %}
-               <i class="fa-solid fa-star"></i>
-               {% else %}
-               <i class="fa-regular fa-star"></i>
-               {% endif %}
-                 <li>Item {{ i }}</li>
-               {% endfor %}
-             </ul>             
-         </div> -->
-         <div class="check">Availability: <input type="checkbox">Out stock</div>
+
+         <div class="check">Availability: {{product.stock}} in stock</div>
          <div class="title">{{product.description}}</div>
          <div class="a">
             <div><a href="#">Add to cart</a></div>

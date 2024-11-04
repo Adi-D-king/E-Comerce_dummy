@@ -20,7 +20,7 @@ class Orders(models.Model):
     
     
 class OrderDetails(models.Model):
-    order_id = models.ForeignKey(Orders,primary_key=True,on_delete=models.CASCADE)
+    order_id = models.ForeignKey(Orders,on_delete=models.CASCADE)
     products_id = models.ForeignKey(Products,on_delete=models.CASCADE)
     payment_id = models.ForeignKey(Payments,on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
@@ -30,3 +30,5 @@ class OrderDetails(models.Model):
 
     def __int__(self):
         return self.order_id
+    
+    

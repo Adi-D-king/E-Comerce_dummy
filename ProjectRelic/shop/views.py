@@ -6,8 +6,9 @@ from django.shortcuts import get_object_or_404
 
 def index(request):
     products = Products.objects.all()
+    account = request.POST.get()
 
-    return render(request,'shop/index.html',{'products':products})
+    return render(request,'shop/index.html',{'products':products,'account':account})
 
 def productView(request,product_id):
     product = get_object_or_404(Products,product_id=product_id)

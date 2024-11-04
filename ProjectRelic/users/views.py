@@ -15,10 +15,13 @@ def login(request):
         e_mail = request.POST.get('e_mail')
         password = request.POST.get('password')
         account = get_object_or_404(Accounts,e_mail=e_mail)
-        if account.password == password:
+        hashpass = make_password(password)
+        check = check_password(password,hashpass)
+        print(check)
+        if check:
             # return HttpResponseRedirect('index',{'products':products,'account':account})
-            # return redirect('index')
-            return render(request,'shop/index.html',{'products':products,'account':account})
+            return redirect('index',)
+            # return render(request,'shop/index.html',{'products':products,'account':account})
         else:
             return HttpResponse("ERROR")
     
@@ -31,14 +34,16 @@ def singup(request):
         last_name = request.POST.get('last_name')
         e_mail = request.POST.get('e_mail')
         phone_nub = request.POST.get('phone_number')
+        password =  request.POST.get('password')
 
-        form_data = Accounts(firstname=first_name,lastname=last_name,e_mail=e_mail,phone_no=phone_nub)
-        # form_data.save()
-        # try:
-        #     form_data.save()
-        # except:
-        #     return 'Account alredy exiests !plese login.'
-        # return redirect('login')
+        passhash = make_password(password)
+
+        form_data = Accounts(firstname=first_name,lastname=last_name,e_mail=e_mail,phone_no=phone_nub,password=passhash)
+        try:
+            form_data.save()
+        except:
+            return 'Account alredy exiests !plese login.'
+        return redirect('login')
     else:
         print(request)
         return render(request,'users/singup.html')

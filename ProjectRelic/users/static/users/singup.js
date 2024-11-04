@@ -12,7 +12,7 @@ $(document).ready(function () {
 
         $.ajax({
             type:'POST',
-            url: "{% url 'verify-email' %}",
+            url: 'verify_email',
             data: {
                 'email': email
             },

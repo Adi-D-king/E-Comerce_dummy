@@ -9,7 +9,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='{% static "users/singup.css"%}'>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src='{% static "users/singup.js"%}'></script>
+    <!-- <script src='{% static "users/singup.js"%}'></script> -->
 </head>
 
 <body>
@@ -65,11 +65,11 @@
         <div>Singup by yahoo</div>
     </div>
 
-    <!-- <script>
+    <script>
         $.ajaxSetup({
             beforeSend: function (xhr, settings) {
                 if (!/^(GET|HEAD|OPTIONS|TRACE)$/.test(settings.type) && !this.crossDomain) {
-                    xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+                    xhr.setRequestHeader("X-CSRFToken","{{ csrf_token }}");
                 }
             }
         });
@@ -96,7 +96,7 @@
                 });
             });
         });
-    </script> -->
+    </script>
 </body>
 
 </html>

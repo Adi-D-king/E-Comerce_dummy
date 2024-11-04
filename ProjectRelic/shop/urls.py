@@ -20,6 +20,6 @@ from . import views
 
 
 urlpatterns = [
-    path('',views.index,name='index'),
+    path('index',views.index,name='index'),
     path('product/<int:product_id>/',views.productView,name='productView'),
 ]

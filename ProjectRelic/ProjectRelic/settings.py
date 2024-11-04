@@ -33,8 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'shop.apps.ShopConfig',
-    'orders.apps.OrdersConfig',
     'payments.apps.PaymentsConfig',
+    'orders.apps.OrdersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'ProjectRelic.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'E_com_dummy',
+        'NAME': 'new_ecom_dummy',
         'USER': 'root',
         'PASSWORD': 'Adity@4410',
         'HOST': 'localhost',  # Or the IP address if MySQL is on a remote server
